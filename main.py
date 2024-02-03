@@ -1,14 +1,10 @@
-# main.py
-
-from econ_simulator import EconSimulator
-from crypto_predictor import CryptoPredictor
+from econ_module import EconomicSimulator
+from interface import UserInterface
 
 def main():
-    econ_simulator = EconSimulator()
-    econ_simulator.run_simulation()
-
-    crypto_predictor = CryptoPredictor()
-    crypto_predictor.run_prediction()
+    econ_sim = EconomicSimulator()
+    ui = UserInterface(econ_sim)
+    ui.run_simulation()
 
 if __name__ == "__main__":
     main()
